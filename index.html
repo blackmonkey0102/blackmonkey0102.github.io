@@ -1,9 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peachy Team | Sáng tạo & Nhiệt huyết</title>
+    <!-- Import font chữ hiện đại từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Đặt lại các giá trị mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hình nền gradient màu đào */
+        body {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            overflow: hidden;
+        }
+
+        /* Thẻ chứa nội dung với hiệu ứng kính mờ (Glassmorphism) */
+        .container {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 3rem 4rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(255, 126, 103, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: fadeUp 1s ease-out;
+        }
+
+        /* Hiệu ứng nhún nhảy cho icon quả đào */
+        .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 2s infinite ease-in-out;
+            filter: drop-shadow(0 10px 10px rgba(255, 107, 107, 0.3));
+        }
+
+        /* Tiêu đề chính */
+        h1 {
+            font-size: 2.8rem;
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Đoạn văn mô tả */
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Nút bấm nổi bật */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(to right, #ff7e67, #ff6b6b);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+        }
+
+        /* Các hiệu ứng chuyển động */
+        @keyframes fadeUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(40px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Bong bóng trang trí nền */
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .bubble:nth-child(1) { width: 100px; height: 100px; top: 10%; left: 15%; animation-delay: 0s; }
+        .bubble:nth-child(2) { width: 150px; height: 150px; top: 70%; left: 80%; animation-delay: 2s; }
+        .bubble:nth-child(3) { width: 60px; height: 60px; top: 40%; left: 85%; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
+    </style>
+</head>
 <body>
 
-<h1>Peachy Team</h1>
-<p>Hello world!</p>
+    <!-- Các bong bóng bay lơ lửng làm nền -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <!-- Nội dung chính -->
+    <div class="container">
+        <div class="icon">🍑</div>
+        <h1>Peachy Team</h1>
+        <p>Xin chào thế giới! 🌍<br>Chúng mình là một đội ngũ đam mê sáng tạo, luôn sẵn sàng tạo ra những sản phẩm ngọt ngào và tuyệt vời nhất.</p>
+        <a href="https://github.com/blackmonkey0102" class="btn" target="_blank">Ghé thăm GitHub</a>
+    </div>
 
 </body>
 </html>
